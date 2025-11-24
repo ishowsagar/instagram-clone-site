@@ -7,6 +7,9 @@ import CreateIcon from "../assets/icons/Create.png";
 import MessagesIcon from "../assets/icons/msg.png";
 import NotificationsIcon from "../assets/icons/noti.png";
 import UserIcon from "../assets/icons/user.png";
+
+import { Link } from "react-router-dom";
+
 export default function Sidebar() {
   return (
     <aside>
@@ -14,7 +17,7 @@ export default function Sidebar() {
         <ul className="sidebar_list_items">
           <li>
             <img className="sidebar_icon" src={HomeIcon} />
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <img className="sidebar_icon" src={SearchIcon} />
@@ -26,7 +29,7 @@ export default function Sidebar() {
           </li>
           <li>
             <img className="sidebar_icon" src={CreateIcon} />
-            <a href="#">Create</a>
+            <Link to="/create">Create</Link>
           </li>
           <li>
             <img className="sidebar_icon" src={ReelsIcon} />
