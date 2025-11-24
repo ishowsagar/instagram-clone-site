@@ -1,60 +1,66 @@
 @layer reset {
   *,
-::before,
-::after {
-  box-sizing: border-box;
-}
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
 
-ol,
-ul {
- list-style: none;
-}
+  ol,
+  ul {
+    list-style: none;
+  }
 
-img,
-svg,
-video,
-canvas,
-picture {
-  display: block;
-  max-width: 100%;
-}
+  img,
+  svg,
+  video,
+  canvas,
+  picture {
+    display: block;
+    max-width: 100%;
+  }
 
-input,
-button,
-select,
-textarea {
-  font: inherit;
-}
+  input,
+  button,
+  select,
+  textarea {
+    font: inherit;
+  }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span {
-  overflow-wrap: break-word;
-}
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    overflow-wrap: break-word;
+  }
 }
 
 @layer baseStyles {
   body {
-    background-color: #E7F2EF;
+    background-color: #e7f2ef;
+  }
+  .Site_wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
-@layer ComponentStyles {
+@layer Header-Styles {
   /* header elements */
   .header_container {
-    background-color: #19183B;
+    background-color: #19183b;
     height: 150px;
     width: 100%;
     padding: 1rem;
@@ -73,10 +79,51 @@ span {
 
   .header_title {
     font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 500;
-    text-shadow: 1px 1px 0  beige;
-    color: #E7F2EF;
+    text-shadow: 1px 1px 0 beige;
+    color: #e7f2ef;
     text-transform: uppercase;
+  }
+}
+
+@layer Footer-Styles {
+  .footer_container {
+    background-color: #19183b;
+    height: 100px;
+    color: #e7f2ef;
+    padding: 2rem;
+  }
+  .footer-content {
+    max-width: 250px;
+  }
+  .footer_nav {
+    width: 100%;
+  }
+  .footer_nav_items {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: space-between;
+  }
+  .footer_nav_items > li > a {
+    color: #e7f2ef;
+    padding: .2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .footer_text_content {
+    font-family: cursive;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    outline: 1px solid lime;
+    margin-top: 20px;
+  }
+
+  .footer_text {
+    color:#FF6B6B  ;
   }
 }
