@@ -49,11 +49,19 @@
   body {
     background-color: #e7f2ef;
   }
+  /* handles the full page */
   .Site_wrapper {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  /* handles the main content between header and footer --> feed */
+  .Site_content {
+    padding: 0 2rem;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
