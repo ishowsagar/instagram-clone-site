@@ -7,6 +7,7 @@ const postDataContext = createContext();
 
 export default function MainLayout() {
   const [postData, setPostData] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -20,11 +21,22 @@ export default function MainLayout() {
         setPostData(data?.slice(0, 15));
       } catch (err) {
         console.error("caught error while fetching data -", err);
+      } finally {
+        setLoading(false);
       }
     }
     fetchData();
   }, []);
 
+  if (loading) {
+    return (
+      <div
+        style={{ textAlign: "center", marginTop: "4rem", fontSize: "1.5rem" }}
+      >
+        Loading...
+      </div>
+    );
+  }
   return (
     <>
       <postDataContext.Provider value={{ postData, setPostData }}>
