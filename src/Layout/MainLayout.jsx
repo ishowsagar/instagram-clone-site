@@ -17,7 +17,7 @@ export default function MainLayout() {
           throw new Error("error fetching data");
         }
         const data = await response.json();
-        setPostData(data?.slice(0, 45));
+        setPostData(data?.slice(0, 15));
       } catch (err) {
         console.error("caught error while fetching data -", err);
       }
