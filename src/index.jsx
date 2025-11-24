@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
     <Routes>
       {/*todo - set up Route for each component to be rendered   */}
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Feed />} />
+        <Route path="feed" element={<Feed />} />
       </Route>
     </Routes>
   </BrowserRouter>

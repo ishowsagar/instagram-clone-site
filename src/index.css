@@ -1,0 +1,82 @@
+@layer reset {
+  *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ol,
+ul {
+ list-style: none;
+}
+
+img,
+svg,
+video,
+canvas,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  overflow-wrap: break-word;
+}
+}
+
+@layer baseStyles {
+  body {
+    background-color: #E7F2EF;
+  }
+}
+
+@layer ComponentStyles {
+  /* header elements */
+  .header_container {
+    background-color: #19183B;
+    height: 150px;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  .header_logo {
+    width: 50px;
+  }
+
+  .header_title {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 0  beige;
+    color: #E7F2EF;
+    text-transform: uppercase;
+  }
+}
