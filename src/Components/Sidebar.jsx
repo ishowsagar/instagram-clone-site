@@ -25,7 +25,7 @@ export default function Sidebar() {
           </li>
           <li>
             <img className="sidebar_icon" src={ExploreIcon} />
-            <a href="#">Explore</a>
+            <Link to="/explore">Explore</Link>
           </li>
           <li>
             <img className="sidebar_icon" src={CreateIcon} />

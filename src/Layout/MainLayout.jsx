@@ -18,7 +18,7 @@ export default function MainLayout() {
           throw new Error("error fetching data");
         }
         const data = await response.json();
-        setPostData(data?.slice(0, 40));
+        setPostData(data?.slice(0, 9));
       } catch (err) {
         console.error("caught error while fetching data -", err);
       } finally {
@@ -38,26 +38,11 @@ export default function MainLayout() {
     );
   }
 
-  const storiesElements = postData.map((post) => {
-    const displayUsername = post.username
-      ? post.username
-      : `user${post.userId}`;
-    return (
-      <div className="story" key={post.id}>
-        <img
-          src={`https://i.pravatar.cc/60?u=${post.id} `}
-          className="story_avatar"
-        />
-        <span className="story_username">{displayUsername}</span>
-      </div>
-    );
-  });
   return (
     <>
       <postDataContext.Provider value={{ postData, setPostData }}>
         <section className="Site_wrapper">
           <Header />
-          <div className="Site_stories_wrapper">{storiesElements}</div>
           <div className="Site_content">
             <div className="Site_sidebar">
               <Sidebar />
