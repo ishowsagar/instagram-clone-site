@@ -55,21 +55,3 @@ export default function Reels() {
     </div>
   );
 }
-//   <button
-//     className="reels_play_button"
-//     style={{
-//       position: "absolute",
-//       top: "50%",
-//       left: "50%",
-//       transform: "translate(-50%, -50%)",
-//       background: "rgba(0,0,0,0.4)",
-//       border: "none",
-//       borderRadius: "50%",
-//       color: "#fff",
-//       fontSize: "2rem",
-//       display: playing[index] ? "none" : "block",
-//       pointerEvents: "none", // so click goes to video
-//     }}
-//   >
-//     ▶
-//   </button>;

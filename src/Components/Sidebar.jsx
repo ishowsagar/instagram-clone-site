@@ -45,7 +45,7 @@ export default function Sidebar() {
           </li>
           <li>
             <img className="sidebar_icon" src={UserIcon} />
-            <a href="#">Profile</a>
+            <Link to="/profile">Profile</Link>
           </li>
           <li>
             <img className="sidebar_icon" src={AiIcon} />

@@ -5,6 +5,10 @@ import MainLayout from "./Layout/MainLayout";
 import CreatePost from "./Components/CreatePost";
 import Explore from "./Components/Explore";
 import Reels from "./Components/Reels";
+import Profile from "./Components/Profile";
+import ProfilePosts from "./Components/ProfilePosts";
+import ProfileArchieves from "./Components/ProfileArchieves";
+import TagPosts from "./Components/TagPosts";
 
 createRoot(document.getElementById("root")).render(
   // ! Main layout - shared header and footer, everything else will be rendered as,
@@ -17,6 +21,12 @@ createRoot(document.getElementById("root")).render(
         <Route path="create" element={<CreatePost />} />
         <Route path="explore" element={<Explore />} />
         <Route path="reels" element={<Reels />} />
+        <Route path="profile" element={<Profile />}>
+          {/* render everything of parent Component --> but render child routes where u placed outlet based on route */}
+          <Route index element={<ProfilePosts />} />
+          <Route path="archieves" element={<ProfileArchieves />} />
+          <Route path="adminOnly" element={<TagPosts />} />
+        </Route>
       </Route>
     </Routes>
   </BrowserRouter>
