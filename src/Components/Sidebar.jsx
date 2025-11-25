@@ -33,7 +33,7 @@ export default function Sidebar() {
           </li>
           <li>
             <img className="sidebar_icon" src={ReelsIcon} />
-            <a href="#">Reels</a>
+            <Link to="/reels">Reels</Link>
           </li>
           <li>
             <img className="sidebar_icon" src={MessagesIcon} />

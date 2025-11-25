@@ -4,6 +4,8 @@ import Feed from "./Components/Feed";
 import MainLayout from "./Layout/MainLayout";
 import CreatePost from "./Components/CreatePost";
 import Explore from "./Components/Explore";
+import Reels from "./Components/Reels";
+
 createRoot(document.getElementById("root")).render(
   // ! Main layout - shared header and footer, everything else will be rendered as,
   //!  whereever user navigates to that route
@@ -14,6 +16,7 @@ createRoot(document.getElementById("root")).render(
         <Route index element={<Feed />} />
         <Route path="create" element={<CreatePost />} />
         <Route path="explore" element={<Explore />} />
+        <Route path="reels" element={<Reels />} />
       </Route>
     </Routes>
   </BrowserRouter>

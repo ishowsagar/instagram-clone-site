@@ -3,7 +3,7 @@ export default function Explore() {
   //* this will direclty give array of 100 images src
   const images = Array.from(
     { length: 100 },
-    (_, index) => `https://loremflickr.com/300/300?random=${index}`
+    (_, i) => `https://picsum.photos/300/300?random=${i}`
   );
 
   const randomSizeImage = Math.floor(Math.random() * images.length);
@@ -11,7 +11,7 @@ export default function Explore() {
   const image = images.map((imageSrc, index) => (
     <img
       className={`explore-img${
-        [{ randomSizeImage }].includes(index) ? "explore-img-large" : ""
+        randomSizeImage === index ? "explore-img-large" : ""
       }`}
       key={index}
       src={imageSrc}
